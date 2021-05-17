@@ -1,8 +1,8 @@
 overwrite: true
 schema:
-  - https://graphql.contentful.com/content/v1/spaces/SPACEID/environments/master:
+  - ${NEXT_PUBLIC_GRAPHQL_ENDPOINT}:
       headers:
-        Authorization: "Bearer "
+        Authorization: 'Bearer ${CONTENTFUL_TOKEN}'
 documents: "src/lib/gql/*.ts"
 generates:
   src/generated/graphql.tsx:

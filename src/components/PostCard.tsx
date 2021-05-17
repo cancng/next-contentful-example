@@ -3,7 +3,6 @@ import Link from 'next/link';
 import NextImage from 'next/image';
 import { styled } from '@fower/styled';
 import { GetPostQueryResult } from '../generated/graphql';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 type Props = {
   post: GetPostQueryResult['data']['postCollection']['items'][0];
@@ -11,7 +10,6 @@ type Props = {
 const NImage = styled(NextImage);
 
 export default function PostCard({ post }: Props) {
-  console.log(post);
   return (
     <Link href={`/post/${post.slug}`}>
       <Box
